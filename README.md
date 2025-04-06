@@ -16,7 +16,14 @@
     ```bash
     pip install -r requirements.txt
     ```
-4. Start the server:
+4. Set up environment variables:
+    - Create a `.env` file in the `backend` folder.
+    - Add the required variables as specified in the project documentation or example file. For this project, you need to define the following:
+    - `GOOGLE_API_KEY`: This is required for accessing Google APIs. Obtain the API key from the Google Cloud Console and add it to the `.env` file as:
+        ```
+        GOOGLE_API_KEY=your_api_key_here
+        ```
+5. Start the server:
     ```bash
     uvicorn main:app --reload
     ```
@@ -30,9 +37,9 @@
     ```bash
     npm install
     ```
-3. Start the application:
+4. Start the application:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Running the Application with Docker Compose
@@ -50,3 +57,11 @@
   ```bash
   docker-compose down
   ```
+
+## Setting Up Environment Variables
+1. Locate the `.env.example` files in the `backend` folder.
+2. Copy the example file to create a `.env` file:
+    ```bash
+    cp backend/.env.example backend/.env
+    ```
+3. Update the `.env` files with the appropriate values for your environment.
